@@ -5,12 +5,16 @@ import './App.css';
 import Display from "./components/display/Display.js";
 import DashBoard from "./components/dashBoard/DashBoard.js";
 
+
+
+
+
 function App() {
   const [balls, setBalls] = useState(0)
   const [strikes, setStrikes] = useState(0)
   const [fouls, setFouls] = useState(0)
 
-  function addStrike(){
+function addStrike(){
   	if (strikes >= 2){
   		setStrikes(0);
   		setBalls(0);
@@ -33,14 +37,19 @@ function App() {
   }
 
   function addFoul(){
-  	if (fouls == 2){
-  		return;
-  	}else{
+  	if (strikes <= 1){
+  		setFouls(fouls + 1);
+  		setStrikes(strikes + 1);	
+  		
+  	} else if (strikes >= 2 ){
+  		setFouls(fouls + 1);
+  	} else {
   		setFouls(fouls + 1);
   		setStrikes(strikes + 1);
   	}
   	
   }
+  
 
   function addHit(){
   	setStrikes(0);
@@ -64,5 +73,5 @@ function App() {
     </div>
   );
 }
-
 export default App;
+

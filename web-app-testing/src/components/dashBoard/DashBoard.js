@@ -4,7 +4,6 @@ import './dashboard.css';
 
 
 function DashBoard(props){
-	console.log(props)
 
 
 	return (
