@@ -11,15 +11,35 @@ function App() {
   const [fouls, setFouls] = useState(0)
 
   function addStrike(){
-  	setStrikes(strikes + 1);
+  	if (strikes >= 2){
+  		setStrikes(0);
+  		setBalls(0);
+  		setFouls(0);
+  	} else{
+  		setStrikes(strikes + 1);
+  	}
+  	
   }
 
   function addBall(){
-  	setBalls(balls + 1);
+  	if (balls >= 3){
+  		setStrikes(0);
+  		setBalls(0);
+  		setFouls(0);
+  	} else{
+  		setBalls(balls + 1);
+  	}
+  	
   }
 
   function addFoul(){
-  	setFouls(fouls + 1);
+  	if (fouls == 2){
+  		return;
+  	}else{
+  		setFouls(fouls + 1);
+  		setStrikes(strikes + 1);
+  	}
+  	
   }
 
   function addHit(){
