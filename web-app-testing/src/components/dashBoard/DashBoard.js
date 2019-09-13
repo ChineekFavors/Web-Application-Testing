@@ -3,15 +3,16 @@ import React from "react";
 import './dashboard.css';
 
 
-function DashBoard(){
+function DashBoard(props){
+	console.log(props)
 
 
 	return (
 		<div className="DashBoardContainer">
-			<button className="strike" type="button">Strike</button>
-			<button className="ball" type="button">Ball</button>
-			<button className="foul" type="button">Foul</button>
-			<button className="hit" type="button">Hit</button>
+			<button onClick={props.addStrike} className="strike" type="button">Strike</button>
+			<button onClick={props.addball} className="ball" type="button">Ball</button>
+			<button onClick={props.addFoul} className="foul" type="button">Foul</button>
+			<button onClick={props.addHit} className="hit" type="button">Hit</button>
 		</div>
 
 	);
