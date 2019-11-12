@@ -1,0 +1,10 @@
+.DashBoardContainer button{
+	margin-right: 30px;
+	font-size: 1.4rem;
+	border-radius: 7px;
+}
+
+.DashBoardContainer{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
