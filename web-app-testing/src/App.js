@@ -64,7 +64,8 @@ function addStrike(){
     <div className="App">
 	    <h1>BaseBall </h1>
 	    <Display balls={balls} strikes={strikes} fouls={fouls} />
-	    <DashBoard addStrike={addStrike} 
+		<DashBoard 
+			addStrike={addStrike} 
 	    	addball={addBall}
 	    	addFoul={addFoul}
 	    	addHit={addHit}
